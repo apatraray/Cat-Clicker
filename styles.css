@@ -7,10 +7,12 @@ h1 {
     font-family: Monoton;
     font-size: 70px;
     margin: 0.2em;
+    color: blue;
 }
 
 h2 {
     margin: 1em 0 0.25em;
+    color: green;
 }
 
 img {
@@ -19,17 +21,40 @@ img {
   	cursor: pointer;
 }
 
-.images {
-	width: 100%;
+.cat-name {
+	color: pink;
 }
 
-.eachImage {
+.caption {
+	color: orange;
+}
+
+.image-list {
+	list-style-type: none;
+  	cursor: pointer;
+	color: #ba94ce;
+	text-decoration: underline;
+}
+
+#Patchy-image,
+#Whitty-image,
+#Blacky-image,
+#Tiger-image,
+#Sweety-image {
+	display: none;
+}
+
+.each-image {
 	float: left;
 	width: 40%;
 	padding: 0.5em;
 }
 
-.clicksOne, .clicksTwo {
+#clicks-one,
+#clicks-two,
+#clicks-three,
+#clicks-four,
+#clicks-five {
     width: 30px;
     height: 30px;
     Background-color: yellow;
