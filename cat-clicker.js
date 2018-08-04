@@ -61,4 +61,3 @@ allCats.forEach(function(cat){
 	};
 })(cat));
 });
-
