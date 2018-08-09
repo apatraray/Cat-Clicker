@@ -21,11 +21,11 @@ img {
   	cursor: pointer;
 }
 
-.cat-name {
+h3{
 	color: pink;
 }
 
-.caption {
+figcaption {
 	color: orange;
 }
 
@@ -50,11 +50,11 @@ img {
 	padding: 0.5em;
 }
 
-#clicks-one,
-#clicks-two,
-#clicks-three,
-#clicks-four,
-#clicks-five {
+#catClick1,
+#catClick2,
+#catClick3,
+#catClick4,
+#catClick5 {
     width: 30px;
     height: 30px;
     Background-color: yellow;

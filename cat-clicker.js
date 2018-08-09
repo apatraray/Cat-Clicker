@@ -2,13 +2,13 @@ let lastClickTarget = "none";
 const catCount = 5;
 const catDetail = [{name: "Patchy", id: "Patchy-image", src: "images/cat_image_one.jpg",
                     ref: "Photo by zelle duda on Unsplash", clicks: 0, nameClick: false},
- 									 {name: "Whitty", id: "Patchy-image", src: "images/cat_image_two.jpg",
+ 									 {name: "Whitty", id: "Whitty-image", src: "images/cat_image_two.jpg",
 									  ref: "Photo by Pixabay from pixabay.com", clicks: 0, nameClick: false},
-									 {name: "Blacky", id: "Patchy-image", src: "images/cat_image_three.jpg",
+									 {name: "Blacky", id: "Blacky-image", src: "images/cat_image_three.jpg",
 									  ref: "Photo by Chinda Sam on Unsplash", clicks: 0, nameClick: false},
-									 {name: "Tiger", id: "Patchy-image", src: "images/cat_image_four.jpg",
+									 {name: "Tiger", id: "Tiger-image", src: "images/cat_image_four.jpg",
 									  ref: "Photo by Clark Young on Unsplash", clicks: 0, nameClick: false},
-									 {name: "Sweety", id: "Patchy-image", src: "images/cat_image_five.jpg",
+									 {name: "Sweety", id: "Sweety-image", src: "images/cat_image_five.jpg",
 									  ref: "Photo by Michael Sum on Unsplash", clicks: 0, nameClick: false}]
 
 const imageList = document.querySelector('.image-list');
@@ -17,7 +17,6 @@ for (let i = 0; i < catCount; i++) {
 		let element = document.createElement('li');
 		element.setAttribute("id","cat"+i);
 		element.innerText = catDetail[i].name;
-		imageList.appendChild(element);
 		element.addEventListener('click', (function(i) {
 				return function() {
 					if(!(catDetail[i].nameClick)){
@@ -58,6 +57,8 @@ for (let i = 0; i < catCount; i++) {
 								lastClickTarget.style.display = "none";
 								clickTarget.style.display = "block";
 						}
+						console.log(lastClickTarget);
+						console.log(clickTarget);
 						lastClickTarget = clickTarget;
 						clickTarget.addEventListener('click', (function() {
 								return function() {
@@ -68,4 +69,5 @@ for (let i = 0; i < catCount; i++) {
 						})());
 			};
 		})(i));
+		imageList.appendChild(element);
 }
